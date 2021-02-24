@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <!-- <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/styles.css"> -->
+</head>
+
+<body>
+    <div class="register-photo" style="background-color: rgb(255,255,255);">
+        <h2 style="color: #f4476b;" class="text-center"><strong>Add Subject Marks</strong></h2><br>
+        <div class="form-container" *ngIf="!show">
+            <form [formGroup]="myGroup">
+               
+                <div class="form-group">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Batch</th>
+                                    <th>Test Type</th>
+                                    <th>Dept</th>
+                                    <th>Section</th>
+                                    <th>Subject code</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <select formControlName="batch" class="form-control"><option disabled>Select a value</option><option value="2016" selected="">2016</option><option value="2017" selected="">2017</option><option value="2018" selected="">2018</option><option value="2019" selected="">2019</option></select>
+                                    </td>
+                                    <td>
+                                        <select formControlName="testtype" class="form-control"><option disabled>Select a value</option><option value="iae1" selected="">IAE1</option><option value="iae2" selected="">IAE2</option><option value="iae3" selected="">IAE3</option><option value="iae4" selected="">IAE4</option></select>
+                                    </td>
+                                    <td>
+                                  <select formControlName="dept" class="form-control"><option disabled>Select a value</option><option value="CSE" selected="">CSE</option><option value="IT" selected="">IT</option><option value="ECE" selected="">ECE</option><option value="EEE" selected="">EEE</option><option value="CIVIL" selected="">CIVIL</option><option value="MECH" selected="">MECH</option></select>
+                                    </td>
+                                    <td>
+                                        <select formControlName="sec" class="form-control"><option disabled>Select a value</option><option value="A" selected="">A</option><option value="B" selected="">B</option><option value="C" selected="">C</option></select>
+                                    </td>
+                                    <td>
+                                       <input type="text" class="form-control" formControlName="subcode">
+                                       </td>
+                                       <td>
+                                            <button class="btn btn-primary1" (click)="submitfn()">SUBMIT</button>
+                                       </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+             
+            </form>
+        </div>
+        <div class="form-container" *ngIf="show">
+            <form [formGroup]="productForm" (ngSubmit)="onSubmitMarks()">
+                <!-- <h2 style="color: #f4476b;" class="text-center"><strong>Add Subject Marks</strong></h2> -->
+                <div class="form-group">
+                    <div class="table-responsive">
+                        <table class="table" formArrayName="values">
+                            <thead>
+                                <tr>
+                                    <th>RollNo</th>
+                                    <th>Marks</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let val of values().controls; let i=index" [formGroupName]="i">
+                                    <td><input class="form-control" type="text" formControlName="rollno"></td>
+                                    <td><input class="form-control" type="number" formControlName="marks"></td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+               </div> 
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">SUBMIT</button></div>
+            </form>  
+        </div>
+    </div>
+    <!-- <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+.navbar-nav a.nav-link{
+    font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+    padding: 0px !important;
+    
+}
+ul.navbar-nav li.nav-item{
+  margin: 0 20px;
+}
+ul.navbar-nav .nav-item:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    transition: width .5s ease, background-color .5s ease;
+}
+.navbar-nav .nav-item:hover:after {
+    width: 100%;
+    background:#05386B;
+}
+.navbar-custom{
+  background-color: black;
+}
+/* change the background color */
+.navbar-custom {
+  background-color: white
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: #05386B;
+  font-weight: bolder;
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+  color: #05386B;
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:focus .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+  color: #05386B;
+  font-weight: bold;
+}

@@ -1,0 +1,41 @@
+
+.page-holder {
+    min-height: 92vh;
+  }
+  .bg-cover {
+    background-size: cover !important;
+  }
+  .vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 70vh; /* These two lines are counted as one :-)       */
+  
+    display: flex;
+    align-items: center;
+  }
+  .list-inline-item {
+    /* float: left; */
+    border: 0 !important;
+   /* margin-left:200px; */
+    padding: 10px 0px 0px 20px;
+}
+  .btn {
+    border-color: #05386B;
+    color:wheat;
+    padding: 10px 32px;
+    text-align: center;
+    margin: 4px 2px;
+    opacity: 0.5;
+    transition: 0.3s;
+    font-size: 20px;
+    /* color:wheat; */
+  }
+  .anc:hover{
+    color:wheat;
+  }
+  a:hover{
+    color:wheat;
+  }
+  .btn:hover {opacity: 1;
+  background-color: #05386B;
+color:wheat;}
+  

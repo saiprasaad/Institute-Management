@@ -1,0 +1,47 @@
+body {margin:2rem;}
+.btn {
+  /* background-color: #0080ff; */
+  padding: 10px 32px;
+  text-align: center;
+  margin: 4px 2px;
+  opacity: 0.5;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+.btn:hover {opacity: 1}
+.form-rounded {
+border-radius: 1rem;
+}
+.page-holder {
+    min-height: 92vh;
+  }
+  .alert {
+    width:25%; 
+      margin: auto; display: table;
+ }
+  .my-select {
+    background-color: light-brown;
+    color: dark-grey;
+    border: 0 none;
+    border-radius: 20px;
+    padding: 6px 20px;
+  }
+  .bg-cover {
+    background-size: cover !important;
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

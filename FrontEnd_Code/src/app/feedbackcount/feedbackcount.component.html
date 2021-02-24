@@ -1,0 +1,88 @@
+<div class="text-center">
+    <h4 style="color: #212529;font-size: 45px;">Student Feedback on Staff</h4>
+</div><br><br>
+<div class="container">
+    <table class="table table-responsive">
+        <tr>
+            <td><b>Department</b></td><td>{{dept}}</td>
+            <td><b>Staff ID</b></td><td>{{staffid}}</td>
+            <td><b>Staff Name</b></td><td>{{staffname}}</td>
+            <td><b>Subject Code</b></td><td>{{subcode}}</td>
+            <td><b>Subject Name</b></td><td>{{subname}}</td>
+            <td><b>Batch</b></td><td>2017</td>
+            <td><b>Semester</b></td><td>7</td>
+        </tr>
+    </table><br>
+    <!-- <form> -->
+    <form>
+    <table class="table">
+        <tr>
+            <th class="thead-dark text-center" rowspan="2"><h4>Parameter</h4></th>
+           
+        <th class="thead-dark text-center" colspan="5"><h4>Rating</h4></th>
+        </tr>
+        <tr>
+        <th class="thead-dark text-center"><label class="badge badge-success1">Very Good</label></th>
+        <th class="thead-dark text-center"><label class="badge badge-success">Good</label></th>
+        <th class="thead-dark text-center"><label class="badge badge-secondary">Average</label></th>
+        <th class="thead-dark text-center"><label class="badge badge-bad">Bad</label></th>
+        <th class="thead-dark text-center"><label class="badge badge-danger">Very Bad</label></th>
+    </tr>
+    <tr>
+        <td><h5>1. Subject Knowledge</h5></td>
+        <td *ngFor="let t of t1" class="text-center">{{t}}</td>
+        <!-- <td class="text-center"><input type="radio" value="4" formControlName="t1"></td>
+        <td class="text-center"><input type="radio" value="3" formControlName="t1"></td>
+        <td class="text-center"><input type="radio" value="2" formControlName="t1"></td>
+        <td class="text-center"><input type="radio" value="1" formControlName="t1"></td> -->
+    </tr>
+    <tr>
+        <td><h5>2. Communication Skills</h5></td>
+        <td *ngFor="let tt of t2" class="text-center">{{tt}}</td>
+    </tr>
+    <tr>
+        <td><h5>3. Shows Flexibility</h5></td>
+        <td *ngFor="let t of t3" class="text-center">{{t}}</td>
+    </tr>
+    <tr>
+        <td><h5>4. Providing Notes</h5></td>
+        <td *ngFor="let t of t4" class="text-center">{{t}}</td>
+    </tr>
+    <!-- <tr>
+        <td><h5>5. Personality</h5></td>
+        <td><input type="radio" value="5" formControlName="t5"></td>
+        <td><input type="radio" value="4" formControlName="t5"></td>
+        <td><input type="radio" value="3" formControlName="t5"></td>
+        <td><input type="radio" value="2" formControlName="t5"></td>
+        <td><input type="radio" value="1" formControlName="t5"></td>
+    </tr>
+    <tr>
+        <td><h5>6. Punctuality</h5></td>
+        <td><input type="radio" value="5" formControlName="t6"></td>
+        <td><input type="radio" value="4" formControlName="t6"></td>
+        <td><input type="radio" value="3" formControlName="t6"></td>
+        <td><input type="radio" value="2" formControlName="t6"></td>
+        <td><input type="radio" value="1" formControlName="t6"></td>
+    </tr>
+    <tr>
+        <td><h5>7. Management Ability</h5></td>
+        <td><input type="radio" value="5" formControlName="t7"></td>
+        <td><input type="radio" value="4" formControlName="t7"></td>
+        <td><input type="radio" value="3" formControlName="t7"></td>
+        <td><input type="radio" value="2" formControlName="t7"></td>
+        <td><input type="radio" value="1" formControlName="t7"></td>
+    </tr>
+    <tr>
+        <td><h5>8. Productivity</h5></td>
+        <td><input type="radio" value="5" formControlName="t8"></td>
+        <td><input type="radio" value="4" formControlName="t8"></td>
+        <td><input type="radio" value="3" formControlName="t8"></td>
+        <td><input type="radio" value="2" formControlName="t8"></td>
+        <td><input type="radio" value="1" formControlName="t8"></td>
+    </tr> -->
+    </table>
+    <div class="text-center">
+        <button class="btn btn-dark" type="button" style="width: 150px;"><a routerLink="/staffhome" class="text-white">BACK</a></button>
+    </div>
+</form>
+</div>

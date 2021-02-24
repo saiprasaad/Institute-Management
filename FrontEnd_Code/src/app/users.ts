@@ -1,0 +1,36 @@
+export class User
+{
+    id:number;
+    batch:number;
+    degree:string;
+    dept:string;
+    name:string;
+    password:string;
+    rollno:string;
+    sec:string;
+    address:string
+    pincode:number;
+    phoneno:string;
+    emailid:string;
+    quota:string;
+    gender:string;
+    dayorhostel:string;
+    constructor(id,batch,degree,dept,name,password,rollno,sec,address,pincode,phoneno,emailid,quota,gender,dayorhostel)
+    {
+        this.id=id;
+        this.batch=batch;
+        this.degree=degree;
+        this.dept=dept;
+        this.name=name;
+        this.password=password;
+        this.rollno=rollno;
+        this.sec=sec;
+        this.address=address;
+        this.pincode=pincode;
+        this.phoneno=phoneno;
+        this.emailid=emailid;
+        this.quota=quota;
+        this.gender=gender;
+        this.dayorhostel=dayorhostel;
+    }
+}

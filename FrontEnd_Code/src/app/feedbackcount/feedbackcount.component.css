@@ -1,0 +1,22 @@
+.badge-success1 {
+    padding: 1px 9px 2px;
+    font-size: 12.025px;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #FFFFFF;
+    background-color:darkgreen;
+    /* -webkit-border-radius: 9px;
+    -moz-border-radius: 9px; */
+    /* border-radius: 9px;   */
+  }
+  .badge-bad {
+    padding: 1px 9px 2px;
+    font-size: 12.025px;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #FFFFFF;
+    background-color:#FFCCBB
+    /* -webkit-border-radius: 9px;
+    -moz-border-radius: 9px; */
+    /* border-radius: 9px;   */
+  }

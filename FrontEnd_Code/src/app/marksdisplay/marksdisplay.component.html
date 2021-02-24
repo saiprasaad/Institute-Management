@@ -1,0 +1,102 @@
+<app-usernav></app-usernav>
+<div class="col text-center display-4">Marks Display</div><br><br>
+
+<div class="container h-100">
+  
+    <div class="row h-100 justify-content-center align-items-center">
+      
+      <div class="container">
+        <div class="table-responsive">
+          <form class="form-group" [formGroup]="form1" (ngSubmit)="showmarks()">
+            <div class="row text-center">
+            <div class="col">   
+              <label class="font-weight-bolder">Select semester</label>
+              <select  class="form-control" formControlName="sem">
+              <option>Select an option</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+            </select></div>
+            <div class="col">   
+              <label class="font-weight-bolder">Select Test type</label>
+              <select  class="form-control" formControlName="testtype">
+              <option>Select an option</option>
+              <option value="iae1">IAE1</option>
+              <option value="iae2">IAE2</option>
+              <option value="iae3">IAE3</option>
+              <option value="iae4">IAE4</option>
+              <option value="model">MODEL</option>
+            </select></div>
+            <div class="col mt-4 pt-2">
+              <button type="submit" class="btn btn-primary">GET MARKS</button>
+            </div>
+          </div>
+       <br><br>
+        <table class="table table-bordered" *ngIf="isset">
+  
+          <tr>
+            <th> <h6>Subject code</h6></th>
+            <th> <h6>Subject Name</h6> </th>         
+            <!-- <th><h6>Staff ID</h6></th> -->
+            <th>  <h6>Marks</h6></th>
+          </tr>
+          <tr *ngFor="let values of marks1">
+            <td>{{values.subcode}}</td>
+            <td>{{values.subname}}</td>
+            <!-- <td>{{values.staffid}}</td> -->
+            <td>{{values.marks}}</td>
+          </tr>
+        </table>
+       <!-- <div class="col text-center">
+                 <button type="submit" class="btn btn-success">Submit</button>
+                </div> -->
+        <!-- <button class="btn btn-primary" type="submit">Submit</button> -->
+      </form>
+      </div>
+      </div>
+</div>
+
+      
+
+<!-- </div><br> -->
+<!-- <div class="col text-center">
+<button class="btn btn-primary">Submit</button>
+</div> -->
+  
+
+<br><br>
+<div class="col mt-4 pt-2 text-center">
+  <button class="btn btn-success"><a (click)="downloadpdf()">Download PDF</a></button>
+</div>
+<!-- <div class="container">
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered"> <thead>
+            <tr>
+              <th scope="col">Subject Name</th>
+              <th scope="col">Subject Code</th>
+              <th scope="col">Staff ID</th>
+              <th scope="col">Marks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Internet Programming</td>
+              <td>CS8623</td>
+              <td>CS1123</td>
+              <td>95</td>
+            </tr>
+            <tr>
+                <td>Database Management System</td>
+                <td>CS8622</td>
+                <td>CS1132</td>
+                <td>98</td>
+            </tr>
+          </tbody>
+</table>
+</div> -->
+<!-- </div> -->

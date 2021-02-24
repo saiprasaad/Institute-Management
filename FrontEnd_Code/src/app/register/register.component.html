@@ -1,0 +1,24 @@
+
+  <div style="background: url(./../assets/back.jpg)" class="page-holder bg-cover">
+    <div class="container">
+      <div style="background:transparent !important" class="jumbotron">
+        <h1 class="display-6 text-center text-white font-weight-bold">Registration Page</h1>
+      </div>
+      <div class="row justify-content-center align-items-center h-100">
+      <form [formGroup]="angForm" class="form-group">
+        <label for="name" class="text-light font-weight-bolder"><h5>Name</h5></label>
+        <input type="text" name="name" formControlName="name" class="form-control form-rounded" style="width: 300px"><br>
+        <label for="name" class="text-light font-weight-bolder"><h5>Name</h5></label>
+        <input type="text" name="name" formControlName="name" class="form-control form-rounded" style="width: 300px"><br>
+        <label for="email" class="text-light font-weight-bolder"><h5>Email Address</h5></label>
+        <input type="email" name="email" formControlName="email" class="form-control form-rounded" style="width: 300px"><br>
+        <label for="password" name="Password" class="text-light font-weight-bolder"><h5>Password</h5></label>
+        <input type="password" formControlName="password" class="form-control form-rounded" style="width: 300px"><br>
+        <div class="col text-center"> 
+        <button (click)="register()" type="submit" class="btn btn-success">Register</button></div>
+      </form>
+      </div>
+      <br>
+        
+        
+    </div>

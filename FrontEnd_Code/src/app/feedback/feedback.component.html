@@ -1,0 +1,65 @@
+<app-usernav></app-usernav>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link href="/src/assets/dashboard_assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link href="/src/assets/dashboard_assets/css/Footer-with-social-media-icons.css">
+    <link href="/src/assets/dashboard_assets/css/Header-Blue.css">
+    <link href="/src/assets/dashboard_assets/css/Modern-Contact-Form.css">
+    <link href="/src/assets/dashboard_assets/css/News-Cards.css">
+</head>
+
+<body>
+    <section class="getintouch">
+        <div class="container modern-form">
+            <div class="text-center">
+                <h4 style="color: #212529;font-size: 45px;">Feedback</h4>
+            </div>
+            <hr class="modern-form__hr">
+            <div class="modern-form__form-container" style="padding-top: 7px;">
+                <form [formGroup]="details" (ngSubmit)="submitform()">
+                    <div class="form-row">
+                        <div class="col col-contact">
+                            <div class="form-group modern-form__form-group--padding-r">
+                                <h4>Batch</h4>
+                                <select formControlName="batch" class="form-control input input-tr" (change)="onChangebatch($event.target.value)"><option disabled>Select Batch</option><option value="2016" selected="">2016</option><option value="2017" selected="">2017</option><option value="2018" selected="">2018</option><option value="2019" selected="">2019</option></select>
+                                <!-- <select type="text" placeholder="First Name"><option>ONE</option></select> -->
+                                <div class="line-box">
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-contact">
+                            <h4>Semester</h4>
+                            <div class="form-group modern-form__form-group--padding-l">
+                                <select formControlName="sem" class="form-control input input-tr" (change)="onChangesem($event.target.value)"><option disabled>Select Semester</option><option value="1" selected="">1</option><option value="2" selected="">2</option><option value="3" selected="">3</option><option value="4" selected="">4</option><option value="5" selected="">5</option><option value="6" selected="">6</option><option value="7" selected="">7</option><option value="8" selected="">8</option></select>
+                                <div class="line-box">
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-contact">
+                            <h4>Subject</h4>
+                            <div class="form-group modern-form__form-group--padding-l">
+                                <select formControlName="subject" class="form-control input input-tr">
+                                    <option disabled>Select Subject</option>
+                                    <option *ngFor="let sub of subarray;let i = index" [value]="subcode[i]">{{sub}}</option>
+                                </select>
+                                <div class="line-box">
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col text-center"><button class="btn btn-primary submit-now" type="submit">Submit Now</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="/src/assets/dashboard_assets/js/jquery.min.js"></script>
+    <script src="/src/assets/dashboard_assets/bootstrap/js/bootstrap.min.js"></script>
+<br><br>    

@@ -1,0 +1,51 @@
+ <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+  <div style="background: url(./../assets/back.jpg)" class="page-holder bg-cover">
+    <div class="container">
+      <div style="background:transparent !important" class="jumbotron">
+        <h1 class="display-6 text-center text-white font-weight-bold">Login Page</h1>
+      </div>  
+      <div *ngIf="invalidlogin" class="row" >
+        <div class="col-lg-12 text-center">
+        <div class="alert alert-danger" role="alert">
+          <i class="fa fa-user fa-lg" aria-hidden="true"></i> Invalid Username or Password!!
+        </div>
+      </div>
+      </div>
+      <br>
+      <div class="row justify-content-center align-items-center h-100">
+        
+      <form [formGroup]="loginform" (ngSubmit)="login()" class="form-group">
+        <label for="email" class="text-light font-weight-bolder"><h5>Roll No</h5></label>
+        <input type="text" name="rollno" formControlName="rollno" class="form-control form-rounded" style="width: 300px" placeholder="Enter your rollno"><br>
+        <label for="password" class="text-light font-weight-bolder"><h5>Password</h5></label>
+        <input type="password" name="password" formControlName="password" class="form-control form-rounded" style="width: 300px" placeholder="Enter your password"><br>
+        <label for="email" class="text-light font-weight-bolder"><h5>Select type</h5></label>
+          <select (change)="changeWebsite($event)" class="form-control custom-select my-select">
+            <option custom-select my-select>Select an option</option>
+            <option value="user">Student</option>
+            <option value="staff">Staff</option>
+            <option value="admin">Admin</option>
+          </select>
+          <br><br>
+
+        <div class="col text-center"> 
+          <button type="submit" class="btn btn-outline-primary text-white font-weight-bold">Login</button></div>
+          <!-- <label>{{userloggedin.dept}}</label> -->
+      </form>
+      </div>
+      <br>
+      
+
+   
+        <!-- <table>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            
+          </tr>
+          <tr *ngFor="let mydata of data[0]">
+            <td>{{mydata.name}}</td>
+            <td>{{mydata.email}}</td>
+    </tr>    
+    </table> -->
+    </div>

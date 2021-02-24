@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>add_subject_allocation</title>
+    <!-- <link rel="stylesheet" type="text/css" href="/src/assets/addsub/bootstrap/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="/src/assets/addsub/css/styles.css"> -->
+</head>
+
+<body>
+    <div *ngIf="!invalid" class="container" style="margin-top: 50px;height: 200px;">
+      
+      <nav aria-label="breadcrumb" role="navigation">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/adminhome">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Add subject allocation</li>
+        </ol>
+      </nav><br>
+        <h3 class="text-center">View Subject Allocation</h3>
+        <div class="form-group" style="height: 78px;margin-top: 29px;">
+          <div class="form-container">
+            <form [formGroup]="suballocform" (ngSubmit)="submitform()">
+               
+                <div class="form-group">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Batch</th>
+                                    <th>Semester</th>
+                                    <th>Department</th>
+                                    <th>Section</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <select formControlName="batch" class="form-control"><option disabled>Select a value</option><option value="2016" selected="">2016</option><option value="2017" selected="">2017</option><option value="2018" selected="">2018</option><option value="2019" selected="">2019</option></select>
+                                    </td>
+                                    <td>
+                                      <select formControlName="sem" class="form-control"><option disabled>Select a value</option><option value="1" selected="">1</option><option value="2" selected="">2</option><option value="3" selected="">3</option><option value="4" selected="">4</option><option value="5" selected="">5</option><option value="6" selected="">6</option><option value="7" selected="">7</option><option value="8" selected="">8</option></select>
+                                    </td>
+                                    <td>
+                                  <select formControlName="dept" class="form-control"><option disabled>Select a value</option><option value="CSE" selected="">CSE</option><option value="IT" selected="">IT</option><option value="ECE" selected="">ECE</option><option value="EEE" selected="">EEE</option><option value="CIVIL" selected="">Civil</option><option value="MECH" selected="">Mech</option></select>
+                                    </td>
+                                    <td>
+                                        <select formControlName="sec" class="form-control"><option disabled>Select a value</option><option value="A" selected="">A</option><option value="B" selected="">B</option><option value="C" selected="">C</option></select>
+                                    </td>
+                                       <td>
+                                            <button type="submit" class="btn btn-secondary">SUBMIT</button>
+                                       </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+             
+            </form>
+        </div>
+          
+  
+    </div>
+    </div><br>
+    <div *ngIf="invalid" class="container" style="border:1px solid #0000FF;">
+    
+      <div class="row text-center mt-2 p-3">
+        <div class="col-sm-3"><h4>Batch: {{suballocform.get('batch').value}}</h4></div>
+        <div class="col-sm-3"><h4>Dept:  {{suballocform.get('dept').value}}</h4></div>
+        <div class="col-sm-3"><h4>Section:{{suballocform.get('sec').value}}</h4></div>
+        <div class="col-sm-3"><h4>Semester:{{suballocform.get('sem').value}}</h4></div>
+      </div>
+    </div><br>
+    <div *ngIf="invalid" class="container table-responsive text-center d-table" style="height: 600px;">
+      <!-- <form [formGroup]="suballocform1" (ngSubmit)="submitdet()">
+        <table class="table">
+          <thead>
+              <tr>
+                  <th>Subject Code</th>
+                  <th>Subject Name</th>
+                  <th>StaffID</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let subs of subdetails[0]">
+                  <td><input type="text" formControlName="subcode" [(ngModel)]="subs.subcode" class="form-control"></td>
+                  <td><input type="text" formControlName="subname" [(ngModel)]="subs.subname" class="form-control"></td>
+                  <td><input type="text" formControlName="staffid" style="width: 100px" class="form-control mx-auto"></td> -->
+                  <!-- <td></td> -->
+              <!-- </tr>
+              <button class="btn btn-primary">SUBMIT</button>
+          </tbody>
+      </table>
+      </form> -->
+      <form [formGroup]="productForm">
+      
+
+    
+        <table class="table table-bordered table-dark" formArrayName="quantities">
+          <tr>
+            <td> <h6>Subject code</h6></td>
+            <td>  <h6>Subject Name</h6></td>
+            <td><h6> Staff ID</h6></td>
+            <td><h6> Staff Name</h6></td>
+          </tr>
+          <tr *ngFor="let quantity of quantities().controls; let i=index" [formGroupName]="i">
+            <td>
+                <input type="text" formControlName="subcode" class="form-control">
+            </td>
+            <td>
+                <input type="text" formControlName="subname" class="form-control">
+            </td>
+            <td>
+            <input type="text" formControlName="staffid" class="form-control">
+        </td>
+        <td>
+          <input type="text" formControlName="staffname" class="form-control">
+      </td>
+          </tr>
+        </table>
+       <!-- <div class="col text-center">
+                 <button type="submit" class="btn btn-success">Submit</button>
+                </div> -->
+
+        
+      </form>
+   
+      <!-- <form>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Subject Code</th>
+                    <th>Subject Name</th>
+                    <th>StaffID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let subs of subdetails[0]">
+                    <td>{{subs.subcode}}</td>
+                    <td>{{subs.subname}}</td>
+                    <td><input type="text" style="width: 100px" class="form-control mx-auto" #staffid></td>
+                    <td><button class="btn btn-primary" (click)="submitdetails(subs,staffid.value)">SUBMIT</button></td>
+                </tr>
+            </tbody>
+        </table> -->
+        <!-- <button type="submit" class="btn btn-primary" (click)="submitdetails()">SUBMIT</button> -->
+      <!-- </form> -->
+    </div>
+    <script src="/src/assets/addsub//js/jquery.min.js"></script>
+    <script src="/src/assets/addsub/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
